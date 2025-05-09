@@ -6,18 +6,15 @@ function formatString(input: string, toUpper?: boolean): string {
   }
 }
 
-
 function filterByRating(
   items: { title: string; rating: number }[]
 ): { title: string; rating: number }[] {
   return items.filter((item) => item.rating >= 4);
 }
 
-
 function concatenateArrays<T>(...arrays: T[][]): T[] {
   return arrays.reduce((acc, curr) => acc.concat(curr), []);
 }
-
 
 class Vehicle {
   private make: string;
@@ -27,7 +24,7 @@ class Vehicle {
     this.year = year;
   }
   getInfo() {
-    return `Make: ${this.make}, Year: ${this.year}`;
+    console.log(`Make: ${this.make}, Year: ${this.year}`);
   }
 }
 class Car extends Vehicle {
@@ -37,15 +34,13 @@ class Car extends Vehicle {
     this.model = model;
   }
   getModel() {
-    return `Model: ${this.model}`;
+    console.log(`Model: ${this.model}`);
   }
 }
-
 
 function processValue(value: string | number): number {
   return typeof value === "string" ? value.length : value * 2;
 }
-
 
 interface Product {
   name: string;
@@ -56,7 +51,6 @@ function getMostExpensiveProduct(products: Product[]): Product | null {
   const p = products.find((p) => p.price === maxPrice);
   return p ?? null;
 }
-
 
 enum Day {
   Monday,
@@ -74,7 +68,6 @@ function getDayType(day: Day): string {
     return "Weekday";
   }
 }
-
 
 async function squareAsync(n: number): Promise<number> {
   return new Promise((resolve, reject) => {
