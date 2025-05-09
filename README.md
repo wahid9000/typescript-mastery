@@ -17,3 +17,22 @@ type Home = {
 type Home2 = keyof Home; // output: ‘sleep’ | ‘eat’
 
 The Home2 will now include the union of all keys of type Home. We did that using the keyof operator.
+
+
+# Difference between `any`, `unknown` and `never` type in TypeScript
+
+`any`, `unknown`, and `never` are three special types we use in TypeScript. They behave differently in different situations and cases.
+
+---
+
+## `any`
+
+The `any` type actually disables type checking. That means, we Can pass any type parameters to a variable, array, or object and it won’t give us an error. When we use `any`, the type can be anything, and it bypasses TypeScript safety.
+
+## `unknown`
+
+There will be cases like: we don't know the type of a parameter at first, but at runtime, we will be able to know the type. In such cases, we use the `unknown` type. The `unknown` type is a safer option compared to `any`.
+
+## `never`
+
+The `never` type is used when there will be cases like a function always throws an error and never returns anything at all or a situation that is impossible.
