@@ -17,13 +17,13 @@ type Home = {
 type Home2 = keyof Home; // output: ‘sleep’ | ‘eat’
 
 The Home2 will now include the union of all keys of type Home. We did that using the keyof operator.
-
+```
 
 # Difference between `any`, `unknown` and `never` type in TypeScript
 
 `any`, `unknown`, and `never` are three special types we use in TypeScript. They behave differently in different situations and cases.
 
----
+
 
 ## `any`
 
