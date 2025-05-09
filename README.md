@@ -1,4 +1,4 @@
-# typescript-mastery : Blog Posts
+# typescript-mastery
 
 # keyof Operator and its Use in TypeScript
 
